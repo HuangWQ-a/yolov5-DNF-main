@@ -39,7 +39,7 @@ def next_door(img):
 if __name__ == "__main__":
     print(current_door(img))
     print(next_door(img))
-    # img_show(img[45:65, 1144:1162])
+    img_show(img[45:65, 1144:1162])
     # np.save("问号模板", img[45:65, 1144:1162])
 
 

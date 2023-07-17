@@ -80,6 +80,7 @@ while True:
                     cls = int(cls)
                     img_object.append(xywh)  # [[位置]]
                     cls_object.append(names[cls])  # [分类]
+                    
                     if names[cls] == 'hero':
                         hero_index = idx
                     if view_img:  # Add bbox to image

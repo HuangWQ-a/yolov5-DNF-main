@@ -9,7 +9,7 @@ import win32api
 import win32con
 import win32gui
 import win32ui
-
+import cv2
 
 def grab_screen(region=None):
 
@@ -41,5 +41,14 @@ def grab_screen(region=None):
     memdc.DeleteDC()
     win32gui.ReleaseDC(hwin, hwindc)
     win32gui.DeleteObject(bmp.GetHandle())
+    #展示截图
+    save_path=r'D:\work\DNF\yolov5-DNF-main\test\screenshot.png'
+    if save_path:
+        cv2.imwrite(save_path, img)
 
+    cv2.imshow('Screen Capture', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     return img
+
+grab_screen(region=(0,0,899,899))
