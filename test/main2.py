@@ -5,12 +5,16 @@ import cv2
 import numpy as np
 import torch
 
+import sys
+sys.path.append("D:\work\DNF\yolov5-DNF-main\models")
+print(sys.path)
 import directkeys
 from direction_move import move
 from directkeys import ReleaseKey
 from getkeys import key_check
 from grabscreen import grab_screen
-from models.experimental import attempt_load
+#from models.experimental import attempt_load
+import models.experimental
 from utils.general import (
     non_max_suppression, scale_coords,
     xyxy2xywh)
