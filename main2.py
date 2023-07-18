@@ -52,7 +52,7 @@ def letterbox(img, new_shape=(640, 640), color=(114, 114, 114), auto=False, scal
 
 
 # 设置所有用到的参数
-weights = r'C:\Users\a\Desktop\yolov5-DNF-main\best.pt'  # yolo5 模型存放的位置
+weights = r'D:\work\DNF\yolov5-DNF-main\test\best.pt'  # yolo5 模型存放的位置
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 model = attempt_load(weights, map_location=device)  # load FP32 model
 window_size = (0, 0, 1280, 800)  # 截屏的位置
